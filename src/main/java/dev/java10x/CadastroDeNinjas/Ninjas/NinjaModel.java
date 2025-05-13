@@ -18,7 +18,10 @@ public class NinjaModel {
     private Long id;
 
     private String name;
+
+    @Column(unique = true)
     private String email;
+
     private int age;
 
     // Muitos ninjas para uma missão
