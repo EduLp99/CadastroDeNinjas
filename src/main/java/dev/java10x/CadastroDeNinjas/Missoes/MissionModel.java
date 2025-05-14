@@ -15,10 +15,13 @@ public class MissionModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
-    private String missionName;
+    @Column(name = "name")
+    private String name;
 
+    @Column(name = "difficulty")
     private String difficulty;
     //UMA MISSAO PODE TER VARIOS NINJAS
     @OneToMany(mappedBy = "mission")
